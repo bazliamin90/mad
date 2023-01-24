@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Title</title>
+  <style>
+    h1{background-color: powderblue; font-family: courier new;}
+    h3{background-color: #DDFAB3; font-family: courier new;}
+    p {font-family: arial;}
+    ol {font-family: arial;}
+    #aq {font-size: 140%}
+    hr {height: 2px;color:gray;background-color:gray}
+
+    .accordion {
+  background-color: #FCE5CD;
+  font-family: courier new;
+  color: #444;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+    .active, .accordion:hover {
+  background-color: #ccc;
+}
+    .accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+    .active:after {
+  content: "\2212";
+}
+    .panel {
+  padding: 0px 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+    #fb:link, #fb:visited {
+  background-color: dodgerblue;
+  border-radius: 4px;
+  color: white;
+  float: right;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  font-size:14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+    #fb:hover, #fb:active {
+  background-color: green;
+}
+    #wa:link, #wa:visited {
+  background-color: dodgerblue;
+  border-radius: 4px;
+  color: white;
+  float: right;
+  margin-right: 10px;
+  padding: 5px 10px;
+  font-size:14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+    #wa:hover, #wa:active {
+  background-color: green;
+}
+    .box {
+    float: left;
+    width: 180px;
+    margin-left: 50px;
+    margin-top: 10px;
+    padding: 3px;
+    border: 2px dashed red;
+}
+    .box2 {
+    float: left;
+    width: 180px;
+    margin-left: 50px;
+    margin-top: 10px;
+    padding: 3px;
+    border: 2px dashed blue;
+}
+    input.larger {
+    transform: scale(2);
+    margin: 30px;
+}
+    .button1 {
+  background-color: white; 
+  color: black; 
+  border: 4px solid #4CAF50;
+}
+    .button2 {
+  background-color: white; 
+  color: black; 
+  border: 4px solid #f44336;
+}
+    .button3 {
+  background-color: white; 
+  color: black; 
+  border: 4px solid #008CBA;
+}
+    #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+    #myBtn:hover {
+  background-color: #555;
+}
+    footer {
+  text-align: center;
+  padding: 0px;
+  background-color: #FCE5CD;
+  color: white;
+}
+table {
+  font-family: arial, sans-serif;
+  font-size: 12px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td{
+  border: 1px solid black;
+  text-align: left;
+  padding: 4px;
+}
+td:nth-child(5) {
+  background-color: #D6EEEE;
+}
+th{
+  position: sticky;
+  top: 0;
+  border: 1px solid black;
+  background-color: #FFAFF6;
+  text-align: center;
+  padding: 4px;
+}
+  </style>
+</head>
+<body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Ke Atas</button>
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+<h1><center>Mad</center></h1>
+<a id="fb" href="https://www.facebook.com/baz.li.3/" target="_blank">Author</a>
+
+<button class="accordion">Bahagian I</button>
+<div class="panel">
+  <p><a href="#intro">Pengenalan</a></p>
+</div>
+
+<button class="accordion">Bahagian II</button>
+<div class="panel">
+  <p><a href="#bila">Bila hukum mad terjadi?</a></p>
+<ol type="i">
+  <li><a href="#asli">Mad Asli</a></li>
+  <li><a href="#lin">Mad Lin</a></li>
+  <li><a href="#aridh">Mad Aridh Lissukun</a></li>
+  <li><a href="#silaht">Mad Silah Thowilah</a></li>
+  <li><a href="#silahq">Mad Silah Qasirah</a></li>
+  <li><a href="#badal">Mad Badal</a></li>
+  <li><a href="#lazimkmk">Mad Lazim Kalimi Mukhaffaf</a></li>
+  <li><a href="#lazimkmt">Mad Lazim Kalimi Muthaqqal</a></li>
+  <li><a href="#lazimhmk">Mad Lazim Harfi Mukhaffaf</a></li>
+  <li><a href="#lazimhmt">Mad Lazim Harfi Muthaqqal</a></li>
+  <li><a href="#wajib">Mad Wajib Muttasil</a></li>
+  <li><a href="#jaiz">Mad Jaiz Munfasil</a></li>
+  <li><a href="#tamkin">Mad Tamkin</a></li>
+</ol>
+</div>
+
+<button class="accordion">Bahagian III</button>
+<div class="panel">
+  <p><a href="#jadual">Jadual</a></p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+<center><h3 id="intro">Pengenalan</h3></center>
+<p>- Huruf mad ada 3.</p> 
+<ol type="i">
+  <li><b><mark> Alif </mark></b></li>
+  <li><b><mark> Wau </mark></b></li>
+  <li><b><mark> Ya </mark></b></li>
+</ol>
+<p>- Hukum Mad dipengaruhi oleh:</p>
+<ol type="i">
+  <li><b><mark> Hamzah </mark></b> (Sebelum/selepas huruf mad) </li>
+  <li><b><mark> Huruf hijaiyyah </mark></b> (Sebelum/selepas huruf mad) </li>
+  <li><b><mark> Ha dhomir </mark></b> (Sebelum huruf mad)</li>
+</ol>
+
+<center><h3 id="bila">Bila hukum mad terjadi?</h3></center>
+<p style="font-size:100%"><i>*HM = Huruf Mad</i></p>
+<br>
+
+1. <button class="button button1" id="asli"><b>Huruf Berbaris</b></button> + <button class="button button2"><b>HM</b></button><br>
+<p id="aq"><b>وَإِ<mark>نَّا</mark> لَ<mark>جَٰ</mark>عِ<mark>لُو</mark>نَ <mark>مَا</mark> عَلَيۡ<mark>هَا</mark> صَ<mark>عِي</mark>دٗا جُرُزًا</b></p>
+[Al-Kahfi 18:8]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1iZzOPk3fr29yI8MepNSPZpz4qvitnPVO" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<!--cb mula-->
+<label for="myCheck">Nama Hukum:</label>
+<input type="checkbox" id="myCheck" onclick="myFunction()" class="larger"><br>
+<ul id="text" style="display:none;margin:0">
+  <li><mark>Mad Asli</mark></li>
+  <li>2 harakat</li>
+</ul>
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+<!--cb ends-->
+<hr>
+
+2. <button class="button button1" id="lin"><b>Huruf Baris Atas</b></button> + <button class="button button2"><b>HM</b></button> + <button class="button button3"><b>Huruf Mati Waqaf</b></button><br>
+<p id="aq"><b>وَهَدَيۡنَٰهُ ٱلنَّجۡ<mark>دَيۡنِ</mark></b></p>
+[Al-Balad 90:10]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=15JKoC8hBNOeKbeaPW6Vj1hHRTE6NVybC" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<!--cb mula-->
+<label for="myCheck2">Nama hukum:</label>   <!--change mycheck# accordingly-->
+<input type="checkbox" id="myCheck2" onclick="myFunction2()" class="larger">  <!--change mycheck# & myfunction# accordingly-->
+
+
+<ul id="text2" style="display:none;margin:0"> <!--change text# accordingly-->
+  <li><mark>Mad Lin</mark></li>
+  <li>2/4/6 harakat</li>
+</ul> 
+
+<!--change myfunction#, mycheck#, text# accordingly-->
+<script>
+function myFunction2() {
+  var checkBox = document.getElementById("myCheck2");
+  var text = document.getElementById("text2");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+<!--cb ends-->
+<hr>
+
+3. <button class="button button1" id="aridh"><b>Huruf Berbaris</b></button> + <button class="button button2"><b>HM</b></button> + <button class="button button3"><b>Huruf Mati Waqaf</b></button><br>
+<p id="aq"><b>أَلَمۡ تَرَ كَيۡفَ فَعَلَ رَبُّكَ بِ<mark>عَادٍ</mark></b></p>
+[Al-Fajr 89:6]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=15DTZB7gT2ZwAEKVBbV5L3VvQyFBF0JZK" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<p id="aq"><b>كَلَّاۖ بَل لَّا تُكۡرِمُونَ ٱلۡيَ<mark>تِيمَ</mark></b></p>
+[Al-Fajr 89:17]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1D54l1h_3ni0ZLfRKzTTED26EjR32VyIt" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<p id="aq"><b>وَٱلۡيَوۡمِ ٱلۡمَوۡ<mark>عُودِ</mark></b></p>
+[Al-Buruj 85:2]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1wffePDGzs791uC4gYOVHc2iyI6s9nXtj" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<!--cb mula-->
+<label for="myCheck3">Nama hukum:</label>   <!--change mycheck# accordingly-->
+<input type="checkbox" id="myCheck3" onclick="myFunction3()" class="larger">  <!--change mycheck# & myfunction# accordingly-->
+
+
+<ul id="text3" style="display:none;margin:0"> <!--change text# accordingly-->
+  <li><mark>Mad Aridh Lissukun</mark></li>
+  <li>6/4/2 harakat</li>
+</ul> 
+
+<!--change myfunction#, mycheck#, text# accordingly-->
+<script>
+function myFunction3() {
+  var checkBox = document.getElementById("myCheck3");
+  var text = document.getElementById("text3");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+<!--cb ends-->
+<hr>
+
+4. <button class="button button1" id="silaht"><b>Ha Dhomir</b></button> + <button class="button button2"><b>HM kecil</b></button> + <button class="button button3"><b>Hamzah</b></button><br>
+<p id="aq"><b>وَمَا يُكَذِّبُ بِ<mark>هِۦٓ إِ</mark>لَّا كُلُّ مُعۡتَدٍ أَثِيمٍ</b></p>
+[Al-Muthoffifin 83:12]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1cWazKycrGivXNjEcw1KSSffpI6y4SK3I" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<p id="aq"><b>إِذۡ قَالَ لَهُۥ رَبُّ<mark>هُۥٓ أَ</mark>سۡلِمۡۖ قَالَ أَسۡلَمۡتُ لِرَبِّ ٱلۡعَٰلَمِينَ</b></p>
+[Al-Baqarah 2:131]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1kVhwfTrVJ6Rr-1-32YSJCURWDtHY_dJZ" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<!--cb mula-->
+<label for="myCheck4">Nama hukum:</label>   <!--change mycheck# accordingly-->
+<input type="checkbox" id="myCheck4" onclick="myFunction4()" class="larger">  <!--change mycheck# & myfunction# accordingly-->
+
+
+<ul id="text4" style="display:none;margin:0"> <!--change text# accordingly-->
+  <li><mark>Mad Silah Thowilah</mark></li>
+  <li>4/5 harakat</li>
+</ul> 
+
+<!--change myfunction#, mycheck#, text# accordingly-->
+<script>
+function myFunction4() {
+  var checkBox = document.getElementById("myCheck4");
+  var text = document.getElementById("text4");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+<!--cb ends-->
+<hr>
+
+5. <button class="button button1" id="silahq"><b>Ha Dhomir</b></button> + <button class="button button2"><b>HM kecil</b></button> + <button class="button button3"><b>Huruf Selain Hamzah</b></button><br>
+<p id="aq"><b>وَٱمۡرَأَتُ<mark>هُۥ حَ</mark>مَّالَةَ ٱلۡحَطَبِ</b></p>
+[Al-Masad 111:4]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1gZQJLsrXySmMaww2xwHOaillYnSEFIvN" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<p id="aq"><b>إِنَّ ٱلۡإِنسَٰنَ لِرَبِّ<mark>هِۦ لَ</mark>كَنُودٞ</b></p>
+[Al-'Adiyat 100:6]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1Z9-KBEjRNAJAHHCG9-9l3wohNnYtJcES" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<!--cb mula-->
+<label for="myCheck5">Nama hukum:</label>   <!--change mycheck# accordingly-->
+<input type="checkbox" id="myCheck5" onclick="myFunction5()" class="larger">  <!--change mycheck# & myfunction# accordingly-->
+
+
+<ul id="text5" style="display:none;margin:0"> <!--change text# accordingly-->
+  <li><mark>Mad Silah Qasirah</mark></li>
+  <li>2 harakat</li>
+</ul> 
+
+<!--change myfunction#, mycheck#, text# accordingly-->
+<script>
+function myFunction5() {
+  var checkBox = document.getElementById("myCheck5");
+  var text = document.getElementById("text5");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+<!--cb ends-->
+<hr>
+
+6. <button class="button button1" id="badal"><b>Hamzah Berbaris</b></button> + <button class="button button2"><b>HM</b></button>
+<p id="aq"><b>وَإِذۡ <mark>ءَا</mark>تَيۡنَا مُوسَى ٱلۡكِتَٰبَ وَٱلۡفُرۡقَانَ لَعَلَّكُمۡ تَهۡتَدُونَ</b></p>
+[Al-Baqarah 2:53]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1J1A46ctdhSaYpQQVi1PG-rBKNOmCFY1_" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<p id="aq"><b>رِجَالٞ لَّا تُلۡهِيهِمۡ تِجَٰرَةٞ وَلَا بَيۡعٌ عَن ذِكۡرِ ٱللَّهِ وَإِقَامِ ٱلصَّلَوٰةِ وَ<mark>إِي</mark>تَآءِ ٱلزَّكَوٰةِ يَخَافُونَ يَوۡمٗا تَتَقَلَّبُ فِيهِ ٱلۡقُلُوبُ وَٱلۡأَبۡصَٰرُ</b></p>
+[Al-Nur 24:37]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1V0ZtMpd5ozqauC0ACMCZxWLewW6BIbvd" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<p id="aq"><b>وَمَا تَفَرَّقَ ٱلَّذِينَ <mark>أُو</mark>تُواْ ٱلۡكِتَٰبَ إِلَّا مِنۢ بَعۡدِ مَا جَآءَتۡهُمُ ٱلۡبَيِّنَةُ</b></p>
+[Al-Bayyinah 98:4]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1rllfasJzcwC5bPvjiGHFMNuDhMaS8vVY" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<br>
+<button class="button button1"><b>Hamzah Wasal</b></button> + <button class="button button2"><b>Hamzah Mati</b></button>
+<p id="aq"><b>قُلۡ أَرَءَيۡتُم مَّا تَدۡعُونَ مِن دُونِ ٱللَّهِ أَرُونِي مَاذَا خَلَقُواْ مِنَ ٱلۡأَرۡضِ أَمۡ لَهُمۡ شِرۡكٞ فِي ٱلسَّمَٰوَٰتِۖ <mark>ٱئۡ</mark>تُونِي بِكِتَٰبٖ مِّن قَبۡلِ هَٰذَآ أَوۡ أَثَٰرَةٖ مِّنۡ عِلۡمٍ إِن كُنتُمۡ صَٰدِقِينَ</b></p>
+[Al-Ahqaf 46:4]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=13Skrous5waNoxmAHe_eG6kp9AwiW5AP2" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<!--cb mula-->
+<label for="myCheck6">Nama hukum:</label>   <!--change mycheck# accordingly-->
+<input type="checkbox" id="myCheck6" onclick="myFunction6()" class="larger">  <!--change mycheck# & myfunction# accordingly-->
+<ul id="text6" style="display:none;margin:0"> <!--change text# accordingly-->
+  <li><mark>Mad Badal</mark></li>
+  <li>2 harakat</li>
+</ul> 
+
+<!--change myfunction#, mycheck#, text# accordingly-->
+<script>
+function myFunction6() {
+  var checkBox = document.getElementById("myCheck6");
+  var text = document.getElementById("text6");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+<!--cb ends-->
+<hr>
+
+7. <button class="button button1" id="lazimkmk"><b>HM</b></button> + <button class="button button2"><b>Huruf Mati Asli (tanpa idgham)</b></button>
+<p id="aq"><b>أَثُمَّ إِذَا مَا وَقَعَ ءَامَنتُم بِهِۦٓۚ ءَ<mark>آلۡ</mark>ـَٰٔنَ وَقَدۡ كُنتُم بِهِۦ تَسۡتَعۡجِلُونَ</b></p>
+[Yunus 10:51]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1P0QTj5kQMEXCV5WgKos9HCg9Y5JwZIWr" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<p id="aq"><b>ءَ<mark>آلۡ</mark>ـَٰٔنَ وَقَدۡ عَصَيۡتَ قَبۡلُ وَكُنتَ مِنَ ٱلۡمُفۡسِدِينَ</b></p>
+[Yunus 10:91]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1SRHKNYfjo8Da9H50QEq1tGlssu1gTz-l" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<!--cb mula-->
+<label for="myCheck7">Nama hukum:</label>   <!--change mycheck# accordingly-->
+<input type="checkbox" id="myCheck7" onclick="myFunction7()" class="larger">  <!--change mycheck# & myfunction# accordingly-->
+<ul id="text7" style="display:none;margin:0"> <!--change text# accordingly-->
+  <li><mark>Mad Lazim Kalimi Mukhaffaf</mark></li>
+  <li>6 harakat</li>
+  <li>Kalimi=Terjadi dalam perkataan</li>
+  <li>Mukhaffaf=Ringan (Tiada idgham)</li>
+  <li>Selepas HM, hurufnya ada tanda <b>mati</b></li>
+</ul> 
+
+<!--change myfunction#, mycheck#, text# accordingly-->
+<script>
+function myFunction7() {
+  var checkBox = document.getElementById("myCheck7");
+  var text = document.getElementById("text7");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+<!--cb ends-->
+<hr>
+
+8. <button class="button button1" id="lazimkmt"><b>HM</b></button> + <button class="button button2"><b>Huruf Mati Asli (ada idgham)</b></button>
+<p id="aq"><b>صِرَٰطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّ<mark>آلِّ</mark>ينَ</b></p>
+[Al-Fatihah 1:7]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=18u7dpSnk09WKJGM4C9m-fTxzjaVK82bx" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<p id="aq"><b>قُلۡ أَفَغَيۡرَ ٱللَّهِ تَأۡمُرُ<mark>وٓنِّ</mark>يٓ أَعۡبُدُ أَيُّهَا ٱلۡجَٰهِلُونَ</b></p>
+[Az-Zumar 39:64]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1Xq5HADInEbpcAtlMv_AHLrj-8qiGX5um" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<!--cb mula-->
+<label for="myCheck8">Nama hukum:</label>   <!--change mycheck# accordingly-->
+<input type="checkbox" id="myCheck8" onclick="myFunction8()" class="larger">  <!--change mycheck# & myfunction# accordingly-->
+<ul id="text8" style="display:none;margin:0"> <!--change text# accordingly-->
+  <li><mark>Mad Lazim Kalimi Muthaqqal</mark></li>
+  <li>6 harakat</li>
+  <li>Kalimi=Terjadi dalam perkataan</li>
+  <li>Muthaqqal=Berat (Ada idgham)</li>
+  <li>Selepas HM, hurufnya ada tanda <b>tasydid</b></li>
+</ul> 
+
+<!--change myfunction#, mycheck#, text# accordingly-->
+<script>
+function myFunction8() {
+  var checkBox = document.getElementById("myCheck8");
+  var text = document.getElementById("text8");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+<!--cb ends-->
+<hr>
+
+9. <button class="button button1" id="lazimhmk"><b>HM</b></button> + <button class="button button2"><b>Huruf Mati Asli (tiada idgham)</b></button>
+<p id="aq"><b>ا<mark>لٓ</mark>رۚ تِلۡكَ ءَايَٰتُ ٱلۡكِتَٰبِ ٱلۡحَكِيمِ</b></p>
+[Yunus 10:1]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1CYi4kp_9SrsSIxW2MpVDO6-JJHDA07BG" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<p>Ejaan huruf <b>Lam</b>:</p>
+<button class="button button1"><b>Lam</b></button> + <button class="button button2"><b>Alif</b></button> + <button class="button button3"><b>Mim mati</b></button>
+<p>Ada HM (Alif) bertemu dengan Huruf Mati (Mim)</p>
+<!--cb mula-->
+<label for="myCheck9">Nama hukum:</label>   <!--change mycheck# accordingly-->
+<input type="checkbox" id="myCheck9" onclick="myFunction9()" class="larger">  <!--change mycheck# & myfunction# accordingly-->
+<ul id="text9" style="display:none;margin:0"> <!--change text# accordingly-->
+  <li><mark>Mad Lazim Harfi Mukhaffaf</mark></li>
+  <li>6 harakat</li>
+  <li>Harfi=Terjadi dalam huruf mula surah</li>
+  <li>Mukhaffaf=Ringan (Tiada idgham)</li>
+</ul> 
+
+<!--change myfunction#, mycheck#, text# accordingly-->
+<script>
+function myFunction9() {
+  var checkBox = document.getElementById("myCheck9");
+  var text = document.getElementById("text9");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+<!--cb ends-->
+<hr>
+
+10. <button class="button button1" id="lazimhmt"><b>HM</b></button> + <button class="button button2"><b>Huruf Mati Asli (ada idgham)</b></button>
+<p id="aq"><b>ط<mark>سٓ</mark>مٓ</b></p>
+[Ash-Shu'ara' 26:1]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1_ZTggt8krZx2yFq5gM5Cku6NXWfysEOa" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<p>Ejaan huruf <b>Sin</b>:</p>
+<button class="button button1"><b>Sin</b></button> + <button class="button button2"><b>Ya</b></button> + <button class="button button3"><b>Nun mati</b></button>
+<p>Ada HM (Ya) bertemu dengan Huruf Mati (Nun)</p>
+<!--cb mula-->
+<label for="myCheck10">Nama hukum:</label>   <!--change mycheck# accordingly-->
+<input type="checkbox" id="myCheck10" onclick="myFunction10()" class="larger">  <!--change mycheck# & myfunction# accordingly-->
+<ul id="text10" style="display:none;margin:0"> <!--change text# accordingly-->
+  <li><mark>Mad Lazim Harfi Muthaqqal</mark></li>
+  <li>6 harakat</li>
+  <li>Harfi=Terjadi dalam huruf mula surah</li>
+  <li>Muthaqqal=Berat (Ada idgham apabila <b>Nun Mati</b> bertemu dengan <b>Mim</b>)</li>
+</ul> 
+
+<!--change myfunction#, mycheck#, text# accordingly-->
+<script>
+function myFunction10() {
+  var checkBox = document.getElementById("myCheck10");
+  var text = document.getElementById("text10");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+<!--cb ends-->
+<hr>
+
+11. <button class="button button1" id="wajib"><b>HM</b></button> + <button class="button button2"><b>Hamzah (dalam 1 kalimah)</b></button>
+<p id="aq"><b>جَزَ<mark>آءٗ</mark> مِّن رَّبِّكَ عَطَ<mark>آءً</mark> حِسَابٗا</b></p>
+[An-Naba' 78:36]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1EnpOBThkke5uAX3Dnxic5tMxjlAWbPEf" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<!--cb mula-->
+<label for="myCheck11">Nama hukum:</label>   <!--change mycheck# accordingly-->
+<input type="checkbox" id="myCheck11" onclick="myFunction11()" class="larger">  <!--change mycheck# & myfunction# accordingly-->
+<ul id="text11" style="display:none;margin:0"> <!--change text# accordingly-->
+  <li><mark>Mad Wajib Muttasil</mark></li>
+  <li>4/5 harakat</li>
+  <li>Harus 6 harakat jika waqaf</li>
+</ul> 
+
+<!--change myfunction#, mycheck#, text# accordingly-->
+<script>
+function myFunction11() {
+  var checkBox = document.getElementById("myCheck11");
+  var text = document.getElementById("text11");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+<!--cb ends-->
+<hr>
+
+12. <button class="button button1" id="jaiz"><b>HM</b></button> + <button class="button button2"><b>Hamzah (kalimah lain)</b></button>
+<p id="aq"><b>فَقُلۡ هَل لَّكَ إِلَ<mark>ىٰٓ أَ</mark>ن تَزَكَّىٰ</b></p>
+[An-Nazi'at 79:18]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1Y9BAKVTv1DZx1MPmj2_n3hRxqptJxor3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<!--cb mula-->
+<label for="myCheck12">Nama hukum:</label>   <!--change mycheck# accordingly-->
+<input type="checkbox" id="myCheck12" onclick="myFunction12()" class="larger">  <!--change mycheck# & myfunction# accordingly-->
+<ul id="text12" style="display:none;margin:0"> <!--change text# accordingly-->
+  <li><mark>Mad Jaiz Munfasil</mark></li>
+  <li>4/5 harakat</li>
+</ul> 
+
+<!--change myfunction#, mycheck#, text# accordingly-->
+<script>
+function myFunction12() {
+  var checkBox = document.getElementById("myCheck12");
+  var text = document.getElementById("text12");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+<!--cb ends-->
+<hr>
+
+13.1 <button class="button button1" id="tamkin"><b>HM</b></button> + <button class="button button2"><b>Huruf Sama Dengannya</b></button>
+<p id="aq"><b>ٱلَّذِ<mark>ي يُ</mark>وَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ</b></p>
+[An-Nas 114:5]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1eY-CjNJbmgvzPy7m7P_rRqcJmTa7oB4A" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<p id="aq"><b>يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُواْ ٱصۡبِرُ<mark>واْ وَ</mark>صَابِرُ<mark>واْ وَ</mark>رَابِطُ<mark>واْ وَ</mark>ٱتَّقُواْ ٱللَّهَ لَعَلَّكُمۡ تُفۡلِحُونَ</b></p>
+[Ali 'Imran 3:200]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1U3r8KgJ-xMQcpH3usat0n54_ydvDFkmv" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br><br>
+13.2 <button class="button button1"><b>Huruf Ya bersabdu, baris bawah</b></button> + <button class="button button2"><b>Ya Mati</b></button>
+<p id="aq"><b>وَلَا يَأۡمُرَكُمۡ أَن تَتَّخِذُواْ ٱلۡمَلَٰٓئِكَةَ وَٱلنَّبِ<mark>يِّ‍ۧ</mark>نَ أَرۡبَابًاۗ أَيَأۡمُرُكُم بِٱلۡكُفۡرِ بَعۡدَ إِذۡ أَنتُم مُّسۡلِمُونَ</b></p>
+[Ali 'Imran' 3:80]<br>
+<audio controls>
+  <source src="https://docs.google.com/uc?export=download&id=1-Wmt-iEk7EShNJxXdhoOXt9CaBrso_Sx" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+<!--cb mula-->
+<label for="myCheck13">Nama hukum:</label>   <!--change mycheck# accordingly-->
+<input type="checkbox" id="myCheck13" onclick="myFunction13()" class="larger">  <!--change mycheck# & myfunction# accordingly-->
+<ul id="text13" style="display:none;margin:0"> <!--change text# accordingly-->
+  <li><mark>Mad Tamkin</mark></li>
+  <li>2 harakat</li>
+</ul> 
+
+<!--change myfunction#, mycheck#, text# accordingly-->
+<script>
+function myFunction13() {
+  var checkBox = document.getElementById("myCheck13");
+  var text = document.getElementById("text13");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+<!--cb ends-->
+
+<center><h3 id=jadual>Jadual</h3></center>
+<table>
+  <tr>
+  	<th style="border-bottom: 3px solid black;">#</th>
+    <th style="border-bottom: 3px solid black;">Sebelum Huruf Mad</th>
+    <th style="border-bottom: 3px solid black;">Huruf Mad</th>
+    <th style="border-bottom: 3px solid black;">Selepas Huruf Mad</th>
+    <th style="border-bottom: 3px solid black;">Hukum</th>
+    <th style="border-bottom: 3px solid black;">Harakat</th>
+  </tr>
+  <tr>
+    <td rowspan="3" style="border-bottom: 3px solid black;">1.</td>
+    <td>Baris atas</td>
+    <td>Alif</td>
+    <td rowspan="3" style="border-bottom: 3px solid black;">-</td>
+    <td rowspan="3" style="border-bottom: 3px solid black;">M. Asli</td>
+    <td rowspan="3" style="border-bottom: 3px solid black;">2</td>
+  </tr>
+   <tr>
+    <td>Baris depan</td>
+    <td>Wau</td>
+  </tr>
+  <tr>
+    <td style="border-bottom: 3px solid black;">Baris bawah</td>
+    <td style="border-bottom: 3px solid black;">Ya</td>
+  </tr>
+  <tr>
+  	<td rowspan="2" style="border-bottom: 3px solid black;">2.</td>
+    <td rowspan="2" style="border-bottom: 3px solid black;">Baris atas</td>
+    <td>Wau</td>
+    <td rowspan="2" style="border-bottom: 3px solid black;">Mati sebab waqaf</td>
+    <td rowspan="2" style="border-bottom: 3px solid black;">M. Lin</td>
+    <td rowspan="2" style="border-bottom: 3px solid black;">2/4/6</td>
+  </tr>
+   <tr>
+    <td style="border-bottom: 3px solid black;">Ya</td>
+  </tr>
+  <tr>
+  	<td rowspan="3" style="border-bottom: 3px solid black;">3.</td>
+    <td>Baris atas</td>
+    <td>Alif</td>
+    <td rowspan="3" style="border-bottom: 3px solid black;">Mati sebab waqaf</td>
+    <td rowspan="3" style="border-bottom: 3px solid black;">M. 'Aridh Lissukun</td>
+    <td rowspan="3" style="border-bottom: 3px solid black;">6/4/2</td>
+  </tr>
+  <tr>
+    <td>Baris depan</td>
+    <td>Wau</td>
+  </tr>
+  <tr>
+    <td style="border-bottom: 3px solid black;">Baris bawah</td>
+    <td style="border-bottom: 3px solid black;">Ya</td>
+  </tr>
+  <tr>
+  	<td rowspan="2" style="border-bottom: 3px solid black;">4.</td>
+    <td rowspan="2" style="border-bottom: 3px solid black;">Ha Dhomir</td>
+    <td>Wau kecil</td>
+    <td rowspan="2" style="border-bottom: 3px solid black;">Hamzah</td>
+    <td rowspan="2" style="border-bottom: 3px solid black;">M. Silah Thowilah</td>
+    <td rowspan="2" style="border-bottom: 3px solid black;">4/5</td>
+  </tr>
+  <tr>
+    <td style="border-bottom: 3px solid black;">Ya kecil</td>
+  </tr>
+   <tr>
+  	<td rowspan="2" style="border-bottom: 3px solid black;">5.</td>
+    <td rowspan="2" style="border-bottom: 3px solid black;">Ha Dhomir</td>
+    <td>Wau kecil</td>
+    <td rowspan="2" style="border-bottom: 3px solid black;">Huruf selain Hamzah</td>
+    <td rowspan="2" style="border-bottom: 3px solid black;">M. Silah Qasirah</td>
+    <td rowspan="2" style="border-bottom: 3px solid black;">2</td>
+  </tr>
+  <tr>
+    <td style="border-bottom: 3px solid black;">Ya kecil</td>
+  </tr>
+  <tr>
+  <td rowspan="4" style="border-bottom: 3px solid black;">6.</td>
+  <td>Hamzah baris atas</td>
+  <td>Alif</td>
+  <td rowspan="4" style="border-bottom: 3px solid black;">-</td>
+  <td rowspan="4" style="border-bottom: 3px solid black;">M. Badal</td>
+  <td rowspan="4" style="border-bottom: 3px solid black;">2</td>
+  </tr>
+  <tr>
+  <td>Hamzah baris depan</td>
+  <td>Wau</td>
+  </tr>
+  <tr>
+  <td>Hamzah baris bawah</td>
+  <td>Ya</td>
+  </tr>
+  <tr>
+  <td style="border-bottom: 3px solid black;">Hamzah wasal</td>
+  <td style="border-bottom: 3px solid black;">Hamzah mati<br><i>(bukan huruf mad)</i></td>
+  </tr>
+  <tr>
+  <td>7.</td>
+  <td rowspan="4" style="border-bottom: 3px solid black;">-</td>
+  <td rowspan="4" style="border-bottom: 3px solid black;">Alif<br>Wau<br>Ya</td>
+  <td>-Huruf Mati Asli<br>-Dalam kalimah<br>-Tanpa idgham</td>
+  <td>M. Lazim Kalimi Mukhaffaf</td>
+  <td rowspan="4" style="border-bottom: 3px solid black;">6</td>
+  </tr>
+  <tr>
+  <td>8.</td>
+  <td>-Huruf Mati Asli<br>-Dalam kalimah<br>-Ada idgham</td>
+  <td style="background-color: #D6EEEE;">M. Lazim Kalimi Muthaqqal</td>
+  </tr>
+  <tr>
+  <td>9.</td>
+  <td>-Huruf Mati Asli<br>-Dalam huruf mula surah<br>-Tanpa idgham</td>
+  <td style="background-color: #D6EEEE;">M. Lazim Harfi Mukhaffaf</td>
+  </tr>
+  <tr>
+  <td style="border-bottom: 3px solid black;">10.</td>
+  <td style="border-bottom: 3px solid black;">-Huruf Mati Asli<br>-Dalam huruf mula surah<br>-Ada idgham</td>
+  <td style="border-bottom: 3px solid black; background-color: #D6EEEE;">M. Lazim Harfi Muthaqqal</td>
+  </tr>
+  <tr>
+  <td style="border-bottom: 3px solid black;">11.</td>
+  <td style="border-bottom: 3px solid black;">-</td>
+  <td style="border-bottom: 3px solid black;">Alif<br>Wau<br>Ya</td>
+  <td style="border-bottom: 3px solid black;">-Hamzah<br>-Dalam kalimah sama</td>
+  <td style="border-bottom: 3px solid black;">M. Wajib Muttasil</td>
+  <td style="border-bottom: 3px solid black;">-4/5<br>-Harus 6 jika waqaf</td>
+  </tr>
+  <tr>
+  <td style="border-bottom: 3px solid black;">12.</td>
+  <td style="border-bottom: 3px solid black;">-</td>
+  <td style="border-bottom: 3px solid black;">Alif<br>Wau<br>Ya</td>
+  <td style="border-bottom: 3px solid black;">-Hamzah<br>-Dalam kalimah lain</td>
+  <td style="border-bottom: 3px solid black;">M. Jaiz Munfasil</td>
+  <td style="border-bottom: 3px solid black;">4/5</td>
+  </tr>
+  <tr>
+  <td rowspan="3">13.</td>
+  <td rowspan="3">-</td>
+  <td>Wau</td>
+  <td>Wau</td>
+  <td rowspan="3">M. Tamkin</td>
+  <td rowspan="3">2</td>
+  </tr>
+  <tr>
+  <td>Ya</td>
+  <td>Ya</td>
+  </tr>
+  <tr>
+  <td>Ya bersabdu</td>
+  <td>Ya</td>
+  </tr>
+</table>
+
+<br>
+<br>
+<footer>
+  <p style="font-family: arial; color:black; font-size:12px;"><i>Ada soalan? Boleh tanya  
+  <a href="https://wa.me/601165402468" target="_blank">di sini</a></i></p>
+</footer>
+</body>
+</html>
